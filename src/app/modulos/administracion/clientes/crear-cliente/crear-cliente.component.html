@@ -1,0 +1,37 @@
+<div class="row">
+    <h3 class="center-aling">Crear Clientes</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidator" (ngSubmit)="GuardarCliente()" method="POST" action="formulario-contacto.php">
+            <div class="input-field">
+                <label for="nombres">Nombres</label>
+                <input formControlName="nombres" type="text" name="nombres" required>
+            </div>
+            <div class="input-field">
+                <label for="apellidos">Apellidos</label>
+                <input formControlName="apellidos" type="text" name="apellidos" required>
+            </div>
+            <div class="input-field">
+                <label for="cedula">Cedula</label>
+                <input formControlName="cedula" type="text" name="cedula" required>
+            </div>
+            <div class="input-field">
+                <label for="celular">Celular</label>
+                <input formControlName="celular" type="text" name="celular" required>
+            </div>            
+            <div class="input-field">
+                <label for="email">Email</label>
+                <input formControlName="email" type="text" name="email" required>
+            </div>        
+            <div class="input-field">
+                <label for="empresaId">Empresa_ID</label>
+                <input formControlName="empresaId" type="text" name="empresaId" required>
+            </div>     
+            
+            <p class="center-aling">
+                <button [disabled]="!fgValidator.valid" class="waves-effect waves-light btn" type="submit"><i
+                    class="material-icons right">send</i>Enviar</button>
+
+            </p>
+        </form>
+    </article>
+</div>

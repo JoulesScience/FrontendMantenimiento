@@ -1,0 +1,42 @@
+<p>editar-cliente works!</p>
+<div class="row">
+    <h3 class="center-aling">Editar Clientes</h3>
+    <article class="col s6 offset-s3">
+        <form [formGroup]="fgValidator" (ngSubmit)="EditarCliente()" method="POST" action="formulario-contacto.php">
+            <input type="hidden" formControlName="id"/>
+            <div class="input-field">
+                <label for="nombres" class="active">Nombres</label>
+                <input formControlName="nombres" type="text" name="nombres" required>
+            </div>
+            <div class="input-field">
+                <label for="apellidos" class="active">Apellidos</label>
+                <input formControlName="apellidos" type="text" name="apellidos" required>
+            </div>
+            <div class="input-field">
+                <label for="cedula" class="active">Cedula</label>
+                <input formControlName="cedula" type="text" name="cedula" required>
+            </div>
+            <div class="input-field">
+                <label for="celular" class="active">Celular</label>
+                <input formControlName="celular" type="text" name="celular" required>
+            </div>            
+            <div class="input-field">
+                <label for="email" class="active">Email</label>
+                <input formControlName="email" type="text" name="email" required>
+            </div>
+            <div class="input-field">
+                <label for="empresa_id" class="active">Empresa_ID</label>
+                <input formControlName="empresaId" type="text" name="empresaId" required>
+            </div>  
+                     
+            <p class="center-aling">
+                <button [disabled]="!fgValidator.valid" class="waves-effect waves-light btn" type="submit"><i
+                    class="material-icons right">send</i>Enviar</button>                 
+
+
+
+            </p>
+        </form>
+    </article>
+</div>
+
